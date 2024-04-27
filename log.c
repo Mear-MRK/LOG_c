@@ -39,7 +39,7 @@ void log_msg(log_type type, const char *format_str, ...)
     va_list args;
     va_start(args, format_str);
     vsnprintf(out_str, LOG_MAX_LEN + 1, frmt, args);
-    printf("LOG_MAX_LEN: %d, following log line length: %zu\n", LOG_MAX_LEN, strlen(out_str));
+    // printf("LOG_MAX_LEN: %d, following log line length: %zu\n", LOG_MAX_LEN, strlen(out_str));
     strcat(out_str, "\n");
     fputs(out_str, log_fstream);
     va_end(args);
